@@ -1,5 +1,15 @@
-function switchLang() {
-  const lang = document.getElementById("langSwitcher").value;
-  document.querySelectorAll(".en").forEach(el => el.style.display = lang === "en" ? "block" : "none");
-  document.querySelectorAll(".bn").forEach(el => el.style.display = lang === "bn" ? "block" : "none");
-}
+
+// Theme toggle
+document.getElementById("themeToggle").onclick = () => {
+  document.body.classList.toggle("dark");
+};
+
+// Scroll animation
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));

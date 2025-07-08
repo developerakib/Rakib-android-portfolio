@@ -1,31 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohammad Rakib - Android Developer</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero fade-in">
-    <button id="themeToggle">🌙</button>
-    <img src="https://github.com/developerakib.png" alt="Mohammad Rakib" class="profile-pic" />
-    <h1>Mohammad <span>Rakib</span></h1>
+  <header class="header">
+    <img src="profile.jpg" alt="Rakib" class="profile-img" />
+    <h1>Mohammad Rakib</h1>
     <p>Android Apps Developer</p>
     <nav>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button id="themeToggle">🌙</button>
   </header>
 
   <main>
-    <section class="about fade-in">
+    <section class="fade" id="about">
       <h2>About Me</h2>
-      <p>I am learning Android app development using Java. This is my portfolio site.</p>
+      <p>I am learning Android app development using Java. <em>This is my portfolio site.</em></p>
     </section>
 
-    <section class="services fade-in">
+    <section class="fade" id="services">
       <h2>Services</h2>
       <ul>
         <li>Custom Android App Development</li>
@@ -33,50 +33,34 @@
       </ul>
     </section>
 
-    <section id="projects" class="fade-in">
+    <section class="fade" id="projects">
       <h2>My Projects</h2>
-      <div class="project-cards">
-        <div class="card">
-          <h3>MyChat App</h3>
-          <p>Android chat app built with Java and Firebase. Real-time messaging with notifications.</p>
-          <a href="#">🔗 GitHub</a> | <a href="#">📥 Download APK</a>
-        </div>
-        <div class="card">
-          <h3>Todo Manager</h3>
-          <p>Simple task manager with calendar integration and offline support.</p>
-          <a href="#">🔗 GitHub</a> | <a href="#">📥 Download APK</a>
-        </div>
+      <div class="project">
+        <h3>MyChat App</h3>
+        <p>Android chat app built with Java and Firebase. Real-time messaging with notifications.</p>
+        <a href="#">GitHub</a> | <a href="#">Download APK</a>
+      </div>
+      <div class="project">
+        <h3>Todo Manager</h3>
+        <p>Simple task manager with calendar integration and offline support.</p>
+        <a href="#">GitHub</a> | <a href="#">Download APK</a>
       </div>
     </section>
 
-    <section id="contact" class="contact fade-in">
+    <section class="fade" id="contact">
       <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/mqkrrglr" method="POST" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <p>Email: <a href="mailto:activeboyrakib3@gmail.com">activeboyrakib3@gmail.com</a></p>
+      <p>Email: activeboyrakib3@gmail.com</p>
       <p>Phone: 01978388281, 01681409216</p>
       <p>WhatsApp: 01978388281</p>
-      <div class="socials">
-        <a href="https://github.com/developerakib" target="_blank">GitHub</a>
-        <a href="https://wa.me/8801978388281" target="_blank">WhatsApp</a>
-      </div>
     </section>
   </main>
 
-  <footer class="fade-in">
-    <p>&copy; 2025 Mohammad Rakib. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
